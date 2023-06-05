@@ -10,7 +10,6 @@ export class myProductDetails extends HTMLElement{
         return await(await fetch("view/my-productDetails.html")).text();
     }
 
-
     selection(e){
         let $ = e.target;
         if (e.target.nodeName == "BUTTON") {
@@ -37,7 +36,7 @@ export class myProductDetails extends HTMLElement{
     connectedCallback(){
         this.components().then(html =>{
             this.innerHTML = html;
-            this.container = this.querySelector("#product_0");
+            this.container = this.querySelector("#products");
             this.container.addEventListener("click", this.selection);
         })
     }

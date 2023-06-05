@@ -11,7 +11,7 @@ export class myHeader extends HTMLElement{
         document.adoptedStyleSheets.push(styles);
         this.components().then(html=>{
             this.innerHTML=html;
-            console.log(html);
+            //console.log(html);
         })
     }
 }

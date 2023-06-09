@@ -18,20 +18,15 @@
             return $this->name;
         }
     }
-
     var_dump(Humano::getInstance(["name"=>"Jhon","age" => "19"])->getName());
     echo dirname(__DIR__);
 
 
 /* 
-
     class Informacion{
         function __construct(public $address,public $bill_date,public $email,public $full_name,public $Identificacion, public $n_bill, public $phone,public $seller){}
-
-
-
-
-    } */
+    }
+*/
 
 ?>
 

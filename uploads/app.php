@@ -15,9 +15,10 @@
         function __set($name, $value){
             $this->$name = $value;
         }
-        function __get($name){
+        //este ya no se necesita por qur lo tenemos en la clase credentials
+/*         function __get($name){
             return $this->$name;
-        }
+        } */
     }
     function autoload($class) {
         // Directorios donde buscar archivos de clases
@@ -45,7 +46,8 @@
     }
     spl_autoload_register('autoload');
 
-    $obj = new connect();
+    //$obj = new connect();
+    client::getInstance(json_decode(file_get_contents("php://input"), true));
 
 /* 
     class apiSuperPerrona{

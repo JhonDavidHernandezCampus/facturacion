@@ -5,7 +5,7 @@
         private $user = "sputnik";
         private $password = "Sp3tn1kC@";
         protected $dbname = "db_hunter_facture_jhon_ferrer";
-        private $port = 3306;
+        //private $port = 3306;
         function __get($name){
             return $this->{$name};
         }

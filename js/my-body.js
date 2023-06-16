@@ -40,6 +40,7 @@ export class myBody extends HTMLElement {
         });
         data.info = info;
         data.producto = producto.product;
+        console.log(data);
         /* esdta linea me muestra los datos que se tiene el formulario */
         //console.log(JSON.stringify(data));
         //traemos los datos que me retorna el archivo app.php

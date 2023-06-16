@@ -57,3 +57,19 @@ ALTER TABLE tb_bill ADD CONSTRAINT fk_id_product FOREIGN KEY(fk_id_product) REFE
     PRIMARY KEY(cc) COMMENT 'establecemos el campo cc como llave rpimario de la tabla'
 );
  */
+
+use db_hunter_facture_jhon_ferrer;
+
+INSERT INTO tb_client(identificacion_client, full_name_client, email_client, address_client, phone_client)
+VALUES ('122345','jhon Ferrer','jhonferrer@gmail.com','1971','3224757531');
+
+show tables;
+select * from tb_client;
+
+#DECLARE @totale INT;
+
+SELECT COUNT(*) INTO @totale FROM tb_client;
+
+select @totale;
+
+select @CAMPER;

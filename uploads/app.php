@@ -1,8 +1,9 @@
 <?php
-
+/* 
     $_DATA = file_get_contents("php://input");
     $_METHOD = $_SERVER["REQUEST_METHOD"];
-    $_HEADER = apache_request_headers();
+    $_HEADER = apache_request_headers(); */
+    
     trait getInstance{
         public static $instance;
         public static function getInstance() {
@@ -27,14 +28,14 @@
             dirname(__DIR__).'/scripts/seller/',
             dirname(__DIR__).'/scripts/db/',
         ];
-        var_dump($directories);
-        echo "lo de arriba son los directorios <br>";
+        //var_dump($directories);
+        //echo "lo de arriba son los directorios <br>";
         // Convertir el nombre de la clase en un nombre de archivo relativo
         $classFile = str_replace('\\', '/', $class) . '.php';
         // Recorrer los directorios y buscar el archivo de la clase
         foreach ($directories as $directory) {
             $file = $directory.$classFile;
-            var_dump($file);
+            //var_dump($file);
             // Verificar si el archivo existe y cargarlo
             if (file_exists($file)) {
                 require $file;
@@ -44,7 +45,9 @@
     }
     spl_autoload_register('autoload');
 
+    $obj = new connect();
 
+/* 
     class apiSuperPerrona{
         use getInstance;
         public function __construct(private $_METHOD,public $_HEADER,private $_DATA){
@@ -64,7 +67,7 @@
     ];
 
     apiSuperPerrona::getInstance($data);
-
+ */
 /* 
 
     var_dump($_DATA);

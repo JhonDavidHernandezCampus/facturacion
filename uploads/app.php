@@ -1,14 +1,15 @@
 <?php
-/* 
-    $_DATA = file_get_contents("php://input");
+
+    /* $_DATA = file_get_contents("php://input");
     $_METHOD = $_SERVER["REQUEST_METHOD"];
-    $_HEADER = apache_request_headers(); */
-    
+    $_HEADER = apache_request_headers(); 
+     */
     trait getInstance{
         public static $instance;
         public static function getInstance() {
             $arg = func_get_args();
             $arg = array_pop($arg);
+            print_r($arg);
             //var_dump( $arg);
             return (!(self::$instance instanceof self) || !empty($arg)) ? self::$instance = new static(...(array) $arg) : self::$instance;
         }
@@ -47,7 +48,14 @@
     spl_autoload_register('autoload');
 
     //$obj = new connect();
-    client::getInstance(json_decode(file_get_contents("php://input"), true));
+    client::getInstance(json_decode(file_get_contents("php://input"), true))->postClient();
+    //print_r($_DATA);
+
+
+
+
+
+
 
 /* 
     class apiSuperPerrona{

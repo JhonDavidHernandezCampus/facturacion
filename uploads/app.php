@@ -1,9 +1,11 @@
 <?php
-
     /* $_DATA = file_get_contents("php://input");
     $_METHOD = $_SERVER["REQUEST_METHOD"];
     $_HEADER = apache_request_headers(); 
      */
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+
     trait getInstance{
         public static $instance;
         public static function getInstance() {
@@ -48,7 +50,28 @@
     spl_autoload_register('autoload');
 
     //$obj = new connect();
-    client::getInstance(json_decode(file_get_contents("php://input"), true))->postClient();
+
+    //client::getInstance(json_decode(file_get_contents("php://input"), true))->postClient();
+    //client::getInstance(json_decode(file_get_contents("php://input"), true))->getAllClient();
+    //client::getInstance(json_decode(file_get_contents("php://input"), true))->updateClient();
+    //client::getInstance(json_decode(file_get_contents("php://input"), true))->deleteClient();
+
+    //bill::getInstance(json_decode(file_get_contents('php://input'), true))->postBill();
+
+
+
+    //product::getInstance(json_decode(file_get_contents('php://input'), true))->postProduct();
+    //product::getInstance(json_decode(file_get_contents('php://input'), true))->getAllProduct();
+    //product::getInstance(json_decode(file_get_contents('php://input'), true))->updateProduct();
+    //product::getInstance(json_decode(file_get_contents('php://input'), true))-> deleteProduct();
+
+    //seller::getInstance(json_decode(file_get_contents('php://input'), true))->postSeller();
+    //seller::getInstance(json_decode(file_get_contents('php://input'), true))->getAllSeller();
+    //seller::getInstance(json_decode(file_get_contents('php://input'), true))->updateSeller();
+    seller::getInstance(json_decode(file_get_contents('php://input'), true))->deleteSeller();
+
+    
+
     //print_r($_DATA);
 
 

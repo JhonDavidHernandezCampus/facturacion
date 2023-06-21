@@ -65,6 +65,21 @@ VALUES ('122345','jhon Ferrer','jhonferrer@gmail.com','1971','3224757531');
 
 show tables;
 select * from tb_client;
+select * from tb_bill;
+select * from tb_product;
+select * from tb_seller;
+
+INSERT INTO tb_product(id_product,name_product,amount_product,value_prodcut) VALUES(1,"jabon",31,2000);
+
+
+INSERT INTO tb_bill(n_bill) VALUES ('1');
+INSERT INTO tb_seller(seller) VALUES("bien");
+
+SHOW COLUMNS FROM tb_bill;
+SHOW COLUMNS FROM tb_product;
+SHOW COLUMNS FROM tb_seller;
+
+
 
 #DECLARE @totale INT;
 
